@@ -27,9 +27,6 @@
       <nav>
         <div class="nav-wrapper">
           <a href="index.php" class="brand-logo"><i class="material-icons">&nbsp;cloud</i>宿舍公告系統</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="login.php"><i class="material-icons left">assignment_ind<!--icon圖示放的地方--></i>管理者登入<!--旁邊的字--></a></li>
-          </ul>
         </div>
       </nav>
 </body>
