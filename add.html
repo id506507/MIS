@@ -58,7 +58,7 @@
       <a href="index.html" class="brand-logo center">中興大學女生宿舍<i class="material-icons">location_city</i></a>
       <ul class="right hide-on-med-and-down">
         <li><div id="showbox"></div></li>
-        <li><a href="login.html"><i class="material-icons left">assignment_ind</i>登出<!--旁邊的字--></a></li>
+        <li><!--<a href="login.html"><i class="material-icons left">assignment_ind</i>登入<!-Y-旁邊的字</a>--></li>
       </ul>
     </div>
   </nav>
@@ -68,7 +68,8 @@
     <div class="container">
       <br>
       <div class="row">
-        <form name="input" action="javascript:formresponse();" class="col s12">
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){window.location='index.html'}"></iframe>
+        <form name="input" action="javascript:formresponse();" class="col s12" target="hidden_iframe">
           <fieldset>
             <legend>請填寫以下資料：</legend>
             <div class="row">
@@ -147,24 +148,30 @@
       var announ_title = document.forms["input"]["announ_title"].value;
       var release_unit = document.forms["input"]["release_unit"].value;
       var content = document.forms["input"]["content"].value;
-      var top = document.forms["input"]["top"].value;
     
       if (announ_title==null || announ_title=="")
-         {
-        alert("不可為空白!");
+      {
+        alert("標題不可為空白!");
         return false;
-         }
+      }
       else if (release_unit==null || release_unit=="")
-         {
-        alert("不可為空白!");
+      {
+        alert("發佈單位不可為空白!");
         return false;
-         }
+      }
+      else if (content==null || content=="")
+      {
+        alert("內容不可為空白!");
+        return false;
+      }
       else
-         {
+      {
         var MySubmit = "https://docs.google.com/forms/d/e/1FAIpQLSeaRrYGJvM57iq6zn0RuRW2PUaQT_9tUHlf8b-HK8ia-JWELg/formResponse?entry.137247205=" + announ_title + "&entry.765403041=" + release_unit + "&entry.1893086156="+content+"&entry.1614933163="+top + "&submit=Submit";
         var NewOpen = window.open(MySubmit);
-         }
-}
+        window.alert("公告已發佈");
+        document.location.href="announ.html";
+      }
+    }
   </script>
      
 </body>
