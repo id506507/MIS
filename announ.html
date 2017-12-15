@@ -58,7 +58,7 @@
       <a href="index.html" class="brand-logo center">中興大學女生宿舍<i class="material-icons">location_city</i></a>
       <ul class="right hide-on-med-and-down">
         <li><div id="showbox"></div></li>
-        <li><a href="login.html"><i class="material-icons left">assignment_ind</i>登入<!--旁邊的字--></a></li>
+        <li><!--<a href="login.html"><i class="material-icons left">assignment_ind</i>登入<!-Y-旁邊的字</a>--></li>
       </ul>
     </div>
   </nav>
@@ -66,12 +66,14 @@
 <!--container-->
   <section>
     <div class="container">
+      <br>
         <table class="striped">
           <thead>
             <tr>
                 <th width="20%">時間</th>
                 <th>標題</th>
                 <th width="20%">發佈單位</th>
+                <th width="50%">內容</th>
             </tr>
           </thead>
 
@@ -96,10 +98,9 @@
           </tr>
         </tbody>
       </table>
-        
-      </div>
+      <br>
+      <p>按此<a href="add.html">新增公告</a></p>
     </div>
-  </div>
   </section>
 
   <footer class="page-footer"><!--footer-->
@@ -158,6 +159,7 @@
 
      function showInfo(data, tabletop) {
         //alert('Successfully processed!')
+        data.reverse();
         console.log(data);
         var text = "";
       for (var i=0; i<data.length; i++) {
@@ -165,6 +167,8 @@
         text +='<td>'+data[i].時間戳記+'</td>';
         text +='<td>'+data[i].title+'</td>';
         text +='<td>'+data[i].Release_Unit+'</td>';
+        text +='<td>'+data[i].content+'</td>';
+
         text +='</tr>';
         //text += data[i].title + " 電話號碼 ： " +  data[i].content+data[i].Release_Unit+data[i].時間戳記+ "<br />";
       }
@@ -177,11 +181,3 @@
 </body>
 </html>
 <!--https://docs.google.com/spreadsheets/d/10zHierUd6_yXpv-KHhajy4cXngRhfdSnFxZyHnpStOI/edit#gid=1925280368 -->
- <!--
-   <tr>
-    <td>Alvin</td>
-    <td>Eclair</td>
-    <td>$0.87</td>
-  </tr>
--->
-  
