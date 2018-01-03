@@ -87,7 +87,7 @@
           </thead>
 
           <tbody id="demo">
-            <tr>
+            <tr><!--preload-->
               <td>
                 <div class="valign-wrapper">
                   <div class="preloader-wrapper big active">
@@ -154,6 +154,10 @@
     $(".button-collapse").sideNav();
     // Initialize collapsible (uncomment the line below if you use the dropdown variation)
     //$('.collapsible').collapsible();
+
+    $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
   </script>
   <!--Tabletop.js-->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
