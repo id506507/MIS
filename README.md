@@ -6,10 +6,10 @@
 
 2. 修改網頁的icon
 
-3. 使用Google字型<br>
+3. **使用Google字型**
 	- 套用Google所提供的字型。
 
-4. 顯示現在的時間
+4. **顯示現在的時間**
 	- 使用JavaScript來讀取時間。
 
 5. 側欄選單和導覽列
@@ -33,8 +33,9 @@
 10. Preload
 	- 因為要等待Google表單回傳資料，為了讓使用者知道要等待回傳，而不是網頁當掉，因此會使用preload，當瀏覽器獲得資料，便會使用 "document.getElementById" 取代preload的程式碼。
 
-11. 使用Tabletop.js
+11. **使用Tabletop.js**
 	- 將Google表單的資料使用Tabletop.js傳到瀏覽器上，因為我要顯示的是公告，愈新的公告要放在前面，所以在設定回傳的資料時需要增加 "data.reverse();" ，把資料的順序顛倒。
+	- 另外在填寫表單的JavaScript中，用getScript()代替window.open，提交表單的時候便會不會出現預設的成功畫面。增加window.alert提示使用者已新增公告
 
 12. 使用超連結
 
@@ -44,7 +45,7 @@
 	- 將每個欄位設定成required，可避免使用者忘了填寫某一個欄位。
 	- 利用JavaScript來判斷使用者的輸入有沒有出錯。
 
-14. 頁面跳轉
+14. **頁面跳轉**
 	- 讓網頁跳到某一個指定的頁面。
 
 15. Collapsible
