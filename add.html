@@ -68,8 +68,7 @@
     <div class="container">
       <br>
       <div class="row">
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){window.location='index.html'}"></iframe>
-        <form name="input" action="javascript:formresponse();" class="col s12" target="hidden_iframe">
+        <form name="input" action="javascript:formresponse();" class="col s12">
           <fieldset>
             <legend>請填寫以下資料：</legend>
             <div class="row">
@@ -178,9 +177,11 @@
       else
       {
         var MySubmit = "https://docs.google.com/forms/d/e/1FAIpQLSeaRrYGJvM57iq6zn0RuRW2PUaQT_9tUHlf8b-HK8ia-JWELg/formResponse?entry.137247205=" + announ_title + "&entry.765403041=" + release_unit + "&entry.1893086156="+content+"&entry.1614933163="+top + "&submit=Submit";
-        var NewOpen = window.open(MySubmit);
-        window.alert("公告已發佈");
-        document.location.href="announ.html";
+        //var NewOpen = window.open(MySubmit);
+        $.getScript(MySubmit);
+        window.alert("公告已發佈，現正回到公告頁面，如果沒有看到最新的公告，請重新整理。");
+        setTimeout("window.location.href='announ.html'",1000);
+        //document.location.href="announ.html";
       }
     }
   </script>
